@@ -40,13 +40,13 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative; /* Changed to relative to avoid overlap */
             bottom: 0;
             width: 100%;
         }
         .contact-form {
             max-width: 600px;
-            margin: 20px auto; /* Added margin for better spacing */
+            margin: 20px auto;
             text-align: left;
         }
         .contact-form label {
@@ -57,15 +57,15 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #ccc; /* Added a border for better visibility */
-            border-radius: 4px; /* Added border radius for aesthetics */
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
         .contact-form button {
             padding: 10px 20px;
             background-color: #444;
             color: white;
             border: none;
-            border-radius: 4px; /* Added border radius for aesthetics */
+            border-radius: 4px;
             cursor: pointer;
         }
         .contact-form button:hover {
@@ -86,7 +86,7 @@
         <a href="#contact" aria-label="Contact Section">Contact</a>
     </nav>
 
-    <main> <!-- Main tag added for better semantics -->
+    <main>
         <section id="home">
             <h2>Welcome to Your Coding Solutions</h2>
             <p>I specialize in writing code for students in languages like Python, C++, and Java. Just email me your instructions, and I will deliver high-quality, tailored solutions for your projects.</p>
