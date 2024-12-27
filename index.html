@@ -134,13 +134,15 @@
             <div class="contact-form">
                 <form action="https://formsubmit.co/dj.crush15@yahoo.com" method="POST">
                     <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required aria-label="Your Name">
 
                     <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required aria-label="Your Email">
 
                     <label for="project">Project Details:</label>
-                    <textarea id="project" name="project" rows="5" required></textarea>
+                    <textarea id="project" name="project" rows="5" required aria-label="Project Details"></textarea>
+
+                    <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html"> <!-- Replace with your thank-you page URL -->
 
                     <button type="submit">Submit</button>
                 </form>
