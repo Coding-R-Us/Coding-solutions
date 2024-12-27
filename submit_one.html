@@ -66,7 +66,7 @@
 
     <main>
         <h2>Submit Your One Project</h2>
-        <form action="https://formsubmit.co/codingprogramsolutions@gmail.com?redirect=https://coding-r-us.github.io/Coding-solutions/submission_one.html" method="POST" enctype="multipart/form-data">
+        <form id="submissionForm" action="https://formsubmit.co/codingprogramsolutions@gmail.com" method="POST" enctype="multipart/form-data">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <select name="project_type" required>
@@ -85,5 +85,30 @@
     <footer>
         <p>&copy; 2024 Coding Solutions. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('submissionForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(this); // Create FormData object
+
+            // Send the form data using fetch
+            fetch(this.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = "https://coding-r-us.github.io/Coding-solutions/submission_one.html"; // Redirect on success
+                } else {
+                    alert('There was a problem with your submission. Please try again.');
+                }
+            })
+            .catch(error => {
+                alert('There was a problem with your submission. Please try again.');
+                console.error('Error:', error);
+            });
+        };
+    </script>
 </body>
 </html>
