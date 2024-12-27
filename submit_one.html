@@ -66,7 +66,7 @@
 
     <main>
         <h2>Submit Your One Project</h2>
-        <form action="https://formsubmit.co/codingprogramsolutions@gmail.com?redirect=https://coding-r-us.github.io/Coding-solutions/submission_one.html" method="POST">
+        <form action="https://formsubmit.co/codingprogramsolutions@gmail.com?redirect=https://coding-r-us.github.io/Coding-solutions/submission_one.html" method="POST" enctype="multipart/form-data">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <select name="project_type" required>
@@ -76,7 +76,7 @@
                 <option value="Java">Java</option>
             </select>
             <textarea name="project_info" rows="4" placeholder="Project Information" required></textarea>
-            <input type="file" name="file" required>
+            <input type="file" name="file" accept=".pdf,.doc,.docx"> <!-- Accept PDF and DOC files -->
             <button type="submit">Submit Project</button>
         </form>
         <p>If you have any questions, please feel free to contact us at <a href="mailto:codingprogramsolutions@gmail.com">codingprogramsolutions@gmail.com</a>.</p>
