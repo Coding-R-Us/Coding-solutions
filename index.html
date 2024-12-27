@@ -55,6 +55,20 @@
             padding: 10px 20px; /* Added padding for footer */
             width: 100%;
         }
+        .test-button {
+            background-color: #00ff00; /* Bright green button */
+            color: #333; /* Dark text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 10px; /* Space between buttons */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .test-button:hover {
+            background-color: #008000; /* Darker green on hover */
+        }
     </style>
 </head>
 <body>
@@ -95,12 +109,10 @@
         </section>
 
         <section id="test-submissions">
-            <h2>Test Submission Links</h2>
-            <p>Use the links below to test the submission pages:</p>
-            <ul>
-                <li><a href="submission_one.html" target="_blank">Test Submission for One Project</a></li>
-                <li><a href="submission_three.html" target="_blank">Test Submission for Three Projects</a></li>
-            </ul>
+            <h2>Test Submission Pages</h2>
+            <p>Click the buttons below to test the submission pages:</p>
+            <button class="test-button" onclick="window.open('submission_one.html', '_blank')">Test Submission for One Project</button>
+            <button class="test-button" onclick="window.open('submission_three.html', '_blank')">Test Submission for Three Projects</button>
         </section>
 
         <section id="terms" class="terms">
