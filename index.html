@@ -55,62 +55,6 @@
             padding: 10px 20px; /* Added padding for footer */
             width: 100%;
         }
-        .contact-form {
-            max-width: 600px;
-            margin: 20px auto;
-            text-align: left;
-        }
-        .contact-form label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contact-form button {
-            padding: 10px 20px;
-            background-color: #444; /* Button background */
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s; /* Smooth transition */
-        }
-        .contact-form button:hover {
-            background-color: #555; /* Button hover color */
-        }
-        .terms {
-            text-align: left; /* Align text to the left for better readability */
-            margin: 20px auto;
-            max-width: 800px; /* Maximum width for terms */
-        }
-        .terms h2 {
-            text-align: center; /* Center the terms title */
-        }
-        .payment-button {
-            padding: 10px 20px;
-            background-color: #0070ba; /* PayPal button color */
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none; /* No underline */
-            font-size: 1.2em; /* Larger text */
-            transition: background-color 0.3s; /* Smooth transition */
-            margin: 10px 0; /* Added margin for spacing between buttons */
-        }
-        .payment-button:hover {
-            background-color: #005f8d; /* Darker color on hover */
-        }
-        .contact-us {
-            margin-top: 40px;
-            font-size: 1em;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -147,41 +91,7 @@
             <h2>Payments</h2>
             <p>To proceed with your project submission, please choose a payment option below:</p>
             <a href="https://www.paypal.com/ncp/payment/UTGAEJ5ELL7SQ" class="payment-button" target="_blank">Pay for One Project ($40)</a>
-            <br>
             <a href="https://www.paypal.com/ncp/payment/RH73YG97Z2KLQ" class="payment-button" target="_blank">Pay for Three Projects ($100)</a>
-            <p>Please confirm you have made the payment:</p>
-            <input type="checkbox" id="paymentConfirmed" aria-label="Payment Confirmed">
-            <label for="paymentConfirmed">I have completed the payment.</label>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Ready to get started? After making your payment, please submit your project details using the form below.</p>
-            <div class="contact-form">
-                <form action="https://formsubmit.co/codingprogramsolutions@gmail.com" method="POST" enctype="multipart/form-data" id="contactForm">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required aria-label="Your Name">
-
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required aria-label="Your Email">
-
-                    <label for="project">Project Details:</label>
-                    <textarea id="project" name="project" rows="5" required aria-label="Project Details"></textarea>
-
-                    <label for="payment_type">Payment Type:</label>
-                    <select id="payment_type" name="payment_type" required aria-label="Payment Type">
-                        <option value="One Project">One Project ($40)</option>
-                        <option value="Three Projects">Three Projects ($100)</option>
-                    </select>
-
-                    <label for="attachment">Attach Document (optional):</label>
-                    <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.txt">
-
-                    <input type="hidden" name="_redirect" value="https://coding-r-us.github.io/Coding-solutions/"> <!-- Redirect URL after submission -->
-
-                    <button type="submit" id="submitButton" disabled>Submit</button>
-                </form>
-            </div>
         </section>
 
         <section id="terms" class="terms">
@@ -209,13 +119,5 @@
             <p>If you have any issues with the website or need assistance, please contact us at: <a href="mailto:codingprogramsolutions@gmail.com">codingprogramsolutions@gmail.com</a></p>
         </div>
     </footer>
-
-    <script>
-        // Enable the submit button only if the payment is confirmed
-        document.getElementById('paymentConfirmed').addEventListener('change', function() {
-            const submitButton = document.getElementById('submitButton');
-            submitButton.disabled = !this.checked; // Enable the button if checked
-        });
-    </script>
 </body>
 </html>
